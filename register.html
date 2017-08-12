@@ -14,24 +14,63 @@
     background-color: #E6E6FA 
 }
 </style>
+
+<script>
+
+function validate(){
+	
+	if(!isNaN($('#UserId').val())){
+		$('#useriderror').show();
+	}else{
+		$('#useriderror').hide();
+	}
+	
+	if(!isNaN($('#EmailAdress').val())){
+		$('#emailerror').show();
+	}else{
+		$('#emailerror').hide();
+	}
+	
+	if(isNaN($('#ContactNumber').val())){
+		$('#contacterror').show();
+	}else{
+		$('#contacterror').hide();
+	}
+	
+	if(!isNaN($('#Location').val())){
+		$('#locationerror').show();
+	}else{
+		$('#locationerror').hide();
+	}
+}
+
+
+</script>
 </head>
 
 <body >
 <center>
 <h1>Fitness : User Entry</h1>
 
-<form>
-<table cellspacing="30">
+<form action="#" target="">
+<table cellspacing="30"> 
 <tr>
-<td>Full Name		:</td>	<td><input type = "text" placeholder = "User Id"></td>
+<td>Full Name		:</td>	<td><input type = "text" placeholder = "User Id" id="UserId">  <label id="useriderror" hidden="true" style="color:red">Name should be in alphabets </label></td>
 </tr>
 &nbsp
 
 <tr>
-<td>Email Adress		:</td>	<td><input type = "text" placeholder = "Email Adress"></td>
+<td>Email Adress		:</td>	<td><input type = "text" placeholder = "Email Adress" id="EmailAdress"> <label id="emailerror" hidden="true" style="color:red">EmailAdress should be in alphabets </label></td>
 </tr>
 <tr>
-<td>DOB :	:</td>	<td><input type = "text" placeholder = "DD/MM/YYYY"></td>
+<td>Contact Number		:</td>	<td><input type = "text" placeholder = "Contact Number" id="ContactNumber"> <label id="contacterror" hidden="true" style="color:red">EmailAdress should be in numeric </label></td>
+</tr>
+
+<tr>
+<td>Location		:</td>	<td><input type = "text" placeholder = "Location" id="Location"> <label id="locationerror" hidden="true" style="color:red">Location should be in alphabets </label></td>
+</tr>
+<tr>
+<td>DOB :	:</td>	<td><input type = "text" placeholder = "DD/MM/YYYY" id="dob"></td>
 </tr>
 <tr>
 <td>Gender :			:</td>	<td><input type="radio" name="gender" value="male" id="gender-male"/>
@@ -44,7 +83,7 @@
           <input type="radio" name="user" value="coach" id="coach"/>
           <label for="coach-Trainee">Trainee</label></td>
 </tr><tr><td></td><td>
-<input type = "submit" value="SUBMIT"></td></tr>
+<input type = "submit" value="SUBMIT" onclick="validate()"></td></tr>
 </table>
 </form>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

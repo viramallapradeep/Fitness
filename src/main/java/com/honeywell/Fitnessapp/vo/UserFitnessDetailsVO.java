@@ -1,6 +1,6 @@
 package com.honeywell.Fitnessapp.vo;
 
-public class UserFitnessDetails {
+public class UserFitnessDetailsVO {
 	
 	private String userId;
 	private String userName;

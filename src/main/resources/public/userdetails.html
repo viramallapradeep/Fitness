@@ -1,0 +1,44 @@
+<div>
+	<div>
+		<h2>User Details</h2>
+		<table>
+		<tr>
+		<th>User ID</th>
+		<th>User Name</th>
+		<th>Running</th>
+		<th>Push Ups</th>
+		<th>Skipping</th>
+		<th>Rank</th>
+		</tr>
+		<tr ng-repeat="detail in details">
+			<td><label>{{detail.userId}}</label></td>
+			<td><label>{{detail.userName}}</label></td>
+			<td><label>{{detail.runningMiles}}</label></td>
+			<td><label>{{detail.pushups}}</label></td>
+			<td><label>{{detail.skippings}}</label></td>
+		</tr>
+		
+		</table>
+	</div>
+		<div>
+		<h2>Coatch Details</h2>
+		<table>
+		<tr>
+		<th>User ID</th>
+		<th>User Name</th>
+		<th>Running</th>
+		<th>Push Ups</th>
+		<th>Skipping</th>
+		<th>Rank</th>
+		</tr>
+		<tr ng-repeat="detail in coatchdetails">
+			<td><label>{{detail.userId}}</label></td>
+			<td><label>{{detail.userName}}</label></td>
+			<td><label>{{detail.runningMiles}}</label></td>
+			<td><label>{{detail.pushups}}</label></td>
+			<td><label>{{detail.skippings}}</label></td>
+		</tr>
+		
+		</table>
+	</div>
+</div>
